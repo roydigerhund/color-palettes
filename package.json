@@ -1,0 +1,20 @@
+{
+  "name": "color-palettes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matthias Martin <github@stichwort-m.de>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "serve": "^13.0.2",
+    "tailwindcss": "^3.0.23"
+  },
+  "scripts": {
+    "dev:css": "tailwindcss -o ./style.css --watch",
+    "dev:serve": "serve -s . -l 3000",
+    "dev": "concurrently \"yarn dev:css\" \"yarn dev:serve\"",
+    "build": "tailwindcss -o ./style",
+    "serve": "serve -s . -l 3000"
+  }
+}
