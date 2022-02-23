@@ -16,7 +16,7 @@ const element = (
         </div>
         <div className="min-w-0 flex-1 grid grid-cols-5 lg:grid-cols-10 gap-x-4 gap-y-3 lg:gap-x-2">
           {Object.entries(palette).map(([key, value]) => (
-            <div className="space-y-1.5">
+            <div key={key} className="space-y-1.5">
               <div
                 className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10"
                 style={{ backgroundColor: value }}
