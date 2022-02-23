@@ -14,7 +14,7 @@
     "dev:css": "tailwindcss -o ./style.css --watch",
     "dev:serve": "serve -s . -l 3000",
     "dev": "concurrently \"yarn dev:css\" \"yarn dev:serve\"",
-    "build": "tailwindcss -o ./style",
+    "build": "tailwindcss -o ./style.css",
     "serve": "serve -s . -l 3000"
   }
 }
