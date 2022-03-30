@@ -6,7 +6,7 @@ Visual presentation of color palettes based on Tailwind CSS and Refactoring UI.
 
 A live version is deployed under [https://colors.stichwort-m.de](https://colors.stichwort-m.de).
 
-The site can be hosted by just uploading the files `index.html`, `style.css`, `color-palettes.js` and `render-palettes.js` to a CDN or another simple server.
+The site can be hosted by running `yarn build` and just uploading the files `index.html`, `style.css`, `color-palettes.js` and `render-palettes.js` to a CDN or another simple server.
 
 ## Running Locally
 
