@@ -1,4 +1,6 @@
-const camelCaseToSpaceCase = (value) => value.substr(0, 1).toUpperCase() + value.substr(1).replace(/([a-zA-Z])(?=[A-Z])/g, '$1 ');
+const camelCaseToSpaceCase = (value) =>
+  value.substr(0, 1).toUpperCase() +
+  value.substr(1).replace(/([a-zA-Z])(?=[A-Z])/g, "$1 ");
 
 const element = (
   <div className="grid grid-cols-1 gap-8 mt-12">
@@ -9,7 +11,7 @@ const element = (
       >
         <div className="w-16 shrink-0">
           <div className="h-10 flex flex-col justify-center">
-            <div className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+            <div className="text-sm font-semibold text-slate-900">
               {camelCaseToSpaceCase(name)}
             </div>
           </div>
@@ -18,14 +20,14 @@ const element = (
           {Object.entries(palette).map(([key, value]) => (
             <div key={key} className="space-y-1.5">
               <div
-                className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10"
+                className="h-10 w-full rounded"
                 style={{ backgroundColor: value }}
               ></div>
               <div className="px-0.5 md:flex md:justify-between md:space-x-2 lg:space-x-0 lg:block">
-                <div className="w-6 font-medium text-slate-900 lg:w-full dark:text-white">
+                <div className="w-6 font-medium text-slate-900 lg:w-full">
                   {key}
                 </div>
-                <div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+                <div className="text-slate-500 font-mono lowercase">
                   {value}
                 </div>
               </div>
