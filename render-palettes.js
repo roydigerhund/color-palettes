@@ -7,13 +7,28 @@ const element = (
     {Object.entries(colorPalettes).map(([name, palette]) => (
       <div
         key={name}
-        className="flex flex-col space-y-3 sm:flex-row text-xs sm:space-y-0 sm:space-x-4"
+        className="flex flex-col space-y-3 sm:flex-row text-xs sm:space-y-0 sm:space-x-4 group"
+        onClick={() => {
+          navigator.clipboard.writeText(
+            `"${name}": ` + JSON.stringify(palette)
+          );
+        }}
       >
-        <div className="w-16 shrink-0">
-          <div className="h-10 flex flex-col justify-center">
+        <div className="sm:w-24 shrink-0">
+          <div className="flex sm:flex-col items-start">
             <div className="text-sm font-semibold text-slate-900">
               {camelCaseToSpaceCase(name)}
             </div>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  `"${name}": ` + JSON.stringify(palette)
+                );
+              }}
+              className="text-left px-2 sm:px-0 py-0.5 sm:py-2 text-sm text-slate-500 hover:text-slate-900 group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+            >
+              Click to Copy
+            </button>
           </div>
         </div>
         <div className="min-w-0 flex-1 grid grid-cols-5 lg:grid-cols-10 gap-x-4 gap-y-3 lg:gap-x-2">
